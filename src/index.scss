@@ -1,0 +1,70 @@
+@import "/src/styles/main";
+
+*,
+html {
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    font-weight: $regular;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: $root-font-size !important;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    a,
+    a:hover,
+    a:active,
+    a:focus {
+        text-decoration: none !important;
+        color: inherit;
+    }
+
+    a,
+    button {
+        outline: none !important;
+    }
+
+    input,
+    input:focus,
+    input:active {
+        border: none;
+        outline: none;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: $regular;
+    color: $black;
+    background-color: $bgPrimaryLight;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(251, 251, 251) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #efefef !important;
+    border-radius: 5px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(176, 178, 180) !important;
+}

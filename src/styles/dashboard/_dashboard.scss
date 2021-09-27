@@ -1,0 +1,97 @@
+.dashboard {
+    div.header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $smallSize;
+
+        div.buttons {
+            button {
+                font-size: $fontSizeSemiMedium;
+                font-weight: $semiBold;
+                margin: $smallestSize;
+                padding: $smallestSize $smallSize;
+                vertical-align: middle;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                color: $black;
+                background: $white;
+                box-shadow: 0 0.5rem $smallSize $light;
+                &.active {
+                    font-weight: $medium;
+                    background: $black;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    h3.title {
+        position: relative;
+        font-size: $fontSizeMedium - 0.2rem;
+        font-weight: $semiBold;
+        color: $black;
+        margin-top: 0;
+        margin-bottom: $mediumSize;
+        &.mt {
+            margin-top: $mediumSize;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 180px;
+            height: 1px;
+            background: $black;
+            border-radius: 20px;
+        }
+    }
+
+    div.card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $smallSize;
+        justify-content: center;
+    }
+
+    div.card {
+        background: $white;
+        border-radius: $semiMediumSize;
+        padding: $smallSize $mediumSize + 0.4rem;
+        max-width: 240px;
+        box-shadow: 0 0.5rem $smallSize $light;
+
+        &.daily {
+            h4.temp {
+                font-size: $fontSizeMedium;
+                sup {
+                    font-size: $fontSizeSemiMedium;
+                }
+            }
+            h5 {
+                font-size: $fontSizeSemiMedium;
+            }
+        }
+        div.icon {
+            text-align: center;
+        }
+
+        h4.temp {
+            font-size: $fontSizePrimary;
+            font-weight: $medium;
+            margin: 0;
+            text-align: center;
+            sup {
+                font-size: $fontSizePrimary - 0.3rem;
+            }
+        }
+
+        h5 {
+            font-size: $fontSizePrimary;
+            font-weight: $medium;
+            margin: 0;
+            text-align: center;
+        }
+    }
+}

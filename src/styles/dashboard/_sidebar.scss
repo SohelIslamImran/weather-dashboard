@@ -1,0 +1,111 @@
+#sidebar {
+    ::-webkit-scrollbar {
+        width: 0px !important;
+    }
+    .sidebar-wrapper {
+        width: 30%;
+        height: $full-vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1050;
+        overflow-y: auto;
+        background-color: $white;
+        transition: left 0.5s ease-out;
+        box-shadow: 0 0.5rem $smallSize $light;
+
+        .sidebar-header {
+            padding: $mediumSize;
+            .search-input {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: $mediumLargeSize + 0.5rem;
+                box-shadow: 0 $smallestSize $smallSize lighten($color: $gray, $amount: 15);
+                border-radius: $semiMediumSize;
+                padding: 0 $smallestSize;
+                i {
+                    font-size: $fontSizePrimary + 0.2rem;
+                    padding-left: $smallestSize;
+                }
+                input {
+                    width: 100%;
+                    height: 100%;
+                    font-size: $fontSizePrimary + 0.18rem;
+                    border-radius: $semiMediumSize;
+                    padding: $smallSize;
+                }
+            }
+        }
+
+        .sidebar-body {
+            display: flex;
+            justify-content: center;
+
+            .weather-icon {
+                position: relative;
+                img {
+                    &:first-child {
+                        position: relative;
+                    }
+                    &.blur-shadow {
+                        filter: blur(20px);
+                        width: 300px;
+                        opacity: 0.5;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                    }
+                }
+            }
+            h1 {
+                font-size: 6rem;
+                text-align: center;
+                margin: 0;
+                color: $black;
+                sup {
+                    font-size: $fontSizeSemiLarge;
+                }
+            }
+            h4 {
+                font-size: $fontSizeSemiMedium;
+                font-weight: $medium;
+                color: $black;
+                margin: 0;
+                i {
+                    margin-right: 8px;
+                    font-size: $fontSizeSemiMedium - 0.1rem;
+                }
+            }
+            h5 {
+                font-size: $fontSizeSemiMedium - 0.2rem;
+                margin-top: 0;
+                margin-bottom: $smallestSize;
+                color: $black;
+                font-weight: $medium;
+                i {
+                    margin-right: 5px;
+                }
+            }
+            h3 {
+                font-size: $fontSizeSemiMedium + 0.2rem;
+                color: $black;
+                font-weight: $semiBold;
+                border: 1px solid $gray;
+                border-radius: $semiMediumSize;
+                margin-top: $largeSize;
+                padding: $smallSize;
+                box-shadow: 0 $smallestSize $smallSize lighten($color: $gray, $amount: 24);
+                i {
+                    margin-right: 8px;
+                }
+            }
+            hr {
+                margin: $mediumSize 0;
+            }
+        }
+    }
+}
